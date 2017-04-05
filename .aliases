@@ -142,3 +142,6 @@ alias gs='git status'
 alias mcv='mvn clean verify'
 alias muci='mvn clean -U install'
 alias mci='mvn clean install'
+
+# tmux commands
+alias tn='tmux new -s '
