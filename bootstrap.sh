@@ -27,6 +27,16 @@ else
 fi;
 unset doIt;
 
+
+# clone
+git clone https://github.com/powerline/fonts.git
+# install
+cd fonts
+./install.sh
+# clean-up a bit
+cd ..
+rm -rf fonts
+
 # Vim plugin support
 echo "Cloning all required vim repositories down..."
 
