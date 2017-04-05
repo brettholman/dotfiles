@@ -26,3 +26,10 @@ else
 	fi;
 fi;
 unset doIt;
+
+# Vim plugin support
+echo "Cloning all needed vim repositories down..."
+
+./vim-plugins.sh &> /dev/null
+
+echo "All repos cloned"
