@@ -13,5 +13,4 @@ git clone https://github.com/airblade/vim-gitgutter
 git clone https://github.com/skwp/vim-easymotion
 git clone https://github.com/jistr/vim-nerdtree-tabs
 git clone https://github.com/kana/vim-surround
-
-
+git clone https://github.com/derekwyatt/vim-scala
