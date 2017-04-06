@@ -13,5 +13,5 @@ Thumbs.db
 .Spotlight-V100
 .Trashes
 
-# Dont need to keep track of other repo
-tmux-powerline/
+# typical intellij project stuff
+.idea
