@@ -252,3 +252,10 @@ function o() {
 function tre() {
 	tree -aC -I '.git|node_modules|bower_components' --dirsfirst "$@" | less -FRNX;
 }
+
+function yesterday() {
+    for i in $(ls -d /site/*); do
+        cd $i
+        git log --graph --decorate --all --since=yesterday.midnight --author="\(Brett Holman\)\|\(brett holman\)\|\(brett.holman\)\|\(bholman\)"
+    done
+}
