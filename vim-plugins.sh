@@ -1,16 +1,18 @@
 #!/bin/bash
 
-cd ~/.vim/bundle
+touch -f ~/.vim/bundle/tmp
 
-git clone https://github.com/scrooloose/syntastic
-git clone https://github.com/kien/ctrlp.vim
-git clone https://github.com/nanotech/jellybeans.vim
-git clone https://github.com/scrooloose/nerdtree
-git clone https://github.com/scrooloose/nerdcommenter
-git clone https://github.com/klen/python-mode
-git clone https://github.com/bling/vim-airline
-git clone https://github.com/airblade/vim-gitgutter
-git clone https://github.com/skwp/vim-easymotion
-git clone https://github.com/jistr/vim-nerdtree-tabs
-git clone https://github.com/kana/vim-surround
-git clone https://github.com/derekwyatt/vim-scala
+git clone https://github.com/scrooloose/syntastic ~/.vim/bundle/syntastic
+git clone https://github.com/kien/ctrlp.vim ~/.vim/bundle/ctrlp.vim
+git clone https://github.com/nanotech/jellybeans.vim ~/.vim/bundle/jellybeans.vim
+git clone https://github.com/scrooloose/nerdtree ~/.vim/bundle/nerdtree
+git clone https://github.com/scrooloose/nerdcommenter ~/.vim/bundle/nerdcommenter
+git clone https://github.com/klen/python-mode ~/.vim/bundle/python-mode
+git clone https://github.com/bling/vim-airline ~/.vim/bundle/vim-airline
+git clone https://github.com/airblade/vim-gitgutter ~/.vim/bundle/vim-gitgutter
+git clone https://github.com/skwp/vim-easymotion ~/.vim/bundle/vim-easymotion
+git clone https://github.com/jistr/vim-nerdtree-tabs ~/.vim/bundle/vim-nerdtree-tabs
+git clone https://github.com/kana/vim-surround ~/.vim/bundle/vim-surround
+git clone https://github.com/derekwyatt/vim-scala ~/.vim/bundle/vim-scala
+
+rm ~/.vim/bundle/tmp
