@@ -145,3 +145,5 @@ alias mci='mvn clean install'
 
 # tmux commands
 alias tn='tmux new -s '
+alias tnw='tmux new -s work'
+alias tkw='tmux kill-session -t work'
