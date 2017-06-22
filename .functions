@@ -254,8 +254,12 @@ function tre() {
 }
 
 function yesterday() {
+    local initial_dir=$pwd
     for i in $(ls -d /site/*); do
         cd $i
-        git log --graph --decorate --all --since=yesterday.midnight --author="\(Brett Holman\)\|\(brett holman\)\|\(brett.holman\)\|\(bholman\)"
+        if [ -d ".git" ]; then
+            git log --graph --decorate --all --since=yesterday.midnight --author="\(Brett Holman\)\|\(brett holman\)\|\(brett.holman\)\|\(bholman\)"
+        fi
     done
+    cd $initial_dir
 }
