@@ -137,6 +137,12 @@ alias brs='be rails s'
 
 # Git commands
 alias gs='git status'
+alias gg='git grep -i '
+alias gd='git diff'
+alias gl='git lg'
+alias ggraph='git lgg'
+alias gb='git branch'
+alias gsl='git stash list'
 
 # mvn commands
 alias mcv='mvn clean verify'
@@ -147,3 +153,27 @@ alias mci='mvn clean install'
 alias tn='tmux new -s '
 alias tnw='tmux new -s work'
 alias tkw='tmux kill-session -t work'
+alias taw='tmux a -t work'
+alias tnt='tmux new -s toggle'
+alias tat='tmux a -t toggle'
+alias tkt='tmux kill-session -t toggle'
+
+#todo
+alias todo='vit'
+
+# Gradle thingy
+alias sserver='rm .pid.lock; gradle bootRun; rm .pid.lock'
+alias integrationTests='rm .pid.lock; gradle integrationTest; rm .pid.lock'
+alias compile='gradle clean build'
+
+# Parallels
+alias linux='ssh 10.211.55.3 -l parallels'
+
+# Git stuff
+
+# git pull --rebase upstream master
+# git push --force origin $branch
+
+# Show script
+alias view-script='cat ${which $1}'
+
