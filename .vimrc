@@ -2,6 +2,7 @@ set nocp
 set runtimepath+=~/.vim
 execute pathogen#infect()
 syntax on
+let g:ale_emit_conflict_warnings = 0
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
@@ -377,7 +378,7 @@ set statusline+=%*
 
 " let g:syntastic_always_populate_loc_list = 1
 " let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 0
 
 let g:syntastic_javascript_checkers = ['eslint']
@@ -393,3 +394,5 @@ map <Leader>a :call RunAllSpecs()<CR>
 let g:NERDSpaceDelims = 1
 let g:NERDTrimTrailingWhitespace = 1
 let g:NERDTreeShowHidden=1
+
+let ALEToggle = 1
