@@ -112,6 +112,10 @@ PS1+="\[${bold}\]\n"; # newline
 #PS1+="\[${white}\] at ";
 #PS1+="\[${hostStyle}\]\h"; # host
 #PS1+="\[${white}\] in ";
+#if [ -z $VIRTUAL_ENV ] 
+#then
+#    PS1+="(`basename \"$VIRTUAL_ENV\"`)"
+#fi;
 PS1+="\[${green}\]\w "; # working directory full path
 PS1+="\$(prompt_git \"\[${violet}\]\" \"\[${blue}\]\")"; # Git repository details
 #PS1+="\n";
