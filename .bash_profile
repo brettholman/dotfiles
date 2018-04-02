@@ -53,22 +53,5 @@ source ~/git-completion.bash
 # Add `killall` tab completion for common apps
 complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes SystemUIServer Terminal Twitter" killall;
 
-
-# set where virutal environments will live
-export WORKON_HOME=$HOME/.virtualenvs
- 
-# ensure all new environments are isolated from the site-packages directory
-export VIRTUALENVWRAPPER_VIRTUALENV_ARGS='--no-site-packages'
-    
-# use the same directory for virtualenvs as virtualenvwrapper
-export PIP_VIRTUALENV_BASE=$WORKON_HOME
-    
-# makes pip detect an active virtualenv and install to it
-export PIP_RESPECT_VIRTUALENV=true
-
-export VIRTUAL_ENV_DISABLE_PROMPT=false
-
-source $(which virtualenvwrapper.sh)
-
 [ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
 [ -f $(brew --prefix)/etc/bash_completion ] && . $(brew --prefix)/etc/bash_completion
