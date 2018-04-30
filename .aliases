@@ -177,3 +177,18 @@ alias linux='ssh 10.211.55.3 -l parallels'
 # Show script
 alias view-script='cat ${which $1}'
 
+function fixSpark() {
+    export SPARK_LOCAL_IP="127.0.0.1"
+    /usr/local/Cellar/apache-spark/2.3.0/libexec/bin/load-spark-env.sh
+    spark-shell
+}
+
+# Fix Spark
+alias fix-spark=fixSpark
+
+# Dynamo
+alias startDynamoDB='java -Djava.library.path=./DynamoDBLocal_lib -jar /site/dependencies/dynamodb_local_latest/DynamoDBLocal.jar -port 8001 -sharedDb &> /site/dependencies/dynamodb_local_latest/log/`date '+%Y-%m-%d_%H:%M:%S'`.log &'
+
+alias killDynamoDB='lsof -ti tcp:8001 | xargs kill'
+
+alias fixSynergy='ps aux | grep -i syngery | grep -v grep | awk "{print $2}" | xargs sudo kill -9'

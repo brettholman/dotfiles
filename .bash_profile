@@ -53,5 +53,7 @@ source ~/git-completion.bash
 # Add `killall` tab completion for common apps
 complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes SystemUIServer Terminal Twitter" killall;
 
+[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
 [ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
 [ -f $(brew --prefix)/etc/bash_completion ] && . $(brew --prefix)/etc/bash_completion
+export PATH="/usr/local/opt/sbt@0.13/bin:$PATH"

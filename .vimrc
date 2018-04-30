@@ -396,3 +396,5 @@ let g:NERDTrimTrailingWhitespace = 1
 let g:NERDTreeShowHidden=1
 
 let ALEToggle = 1
+
+nmap <Leader><Leader> :w<CR>:make! \| botright cwindow<CR>
