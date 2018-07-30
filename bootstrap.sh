@@ -57,3 +57,5 @@ echo "Cloning all required vim repositories down..."
 ./vim-plugins.sh &> /dev/null
 
 echo "All repos cloned"
+
+source ~/.bashrc
