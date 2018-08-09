@@ -12,7 +12,7 @@ function doIt() {
                 cp -R ~/$file .
             fi
         else 
-            cp ~/$file . > /dev/null 2>&1
+            cp -R ~/$file . > /dev/null 2>&1
         fi
     done
     rm -rf .vim/bundle/*
