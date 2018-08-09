@@ -9,10 +9,10 @@ function doIt() {
         if [[ -d $file ]]; then
             if [[ -d $file.git ]]; then
                 rm -rf $file.git
-                cp -R $file .
+                cp -R ~/$file .
             fi
         else 
-            cp $file . > /dev/null 2>&1
+            cp ~/$file . > /dev/null 2>&1
         fi
     done
     rm -rf .vim/bundle/*
