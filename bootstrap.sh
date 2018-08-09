@@ -30,6 +30,10 @@ fi;
 read -p "Do you want to use ZSH? " -n 1 -r
 echo    # (optional) move to a new line
 if [[ $REPLY =~ ^[Yy]$ ]]; then
+    if [[ ! -f /etc/zsh ]]; then
+        echo 'Please manually install zsh using the package manager designed for your system'
+        sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+    fi
     exec zsh
 else
     exec bash
