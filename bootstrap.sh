@@ -26,6 +26,15 @@ else
 		doIt;
 	fi;
 fi;
+
+read -p "Do you want to use ZSH? " -n 1 -r
+echo    # (optional) move to a new line
+if [[ $REPLY =~ ^[Yy]$ ]]; then
+    exec zsh
+else
+    exec bash
+fi
+
 unset doIt;
 
 

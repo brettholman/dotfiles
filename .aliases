@@ -148,6 +148,7 @@ alias gsl='git stash list'
 alias mcv='mvn clean verify'
 alias muci='mvn clean -U install'
 alias mci='mvn clean install'
+alias mcs='mvn clean && mvn spring-boot:run'
 
 # tmux commands
 alias tn='tmux new -s '
@@ -190,5 +191,15 @@ alias fix-spark=fixSpark
 alias startDynamoDB='java -Djava.library.path=./DynamoDBLocal_lib -jar /site/dependencies/dynamodb_local_latest/DynamoDBLocal.jar -port 8001 -sharedDb &> /site/dependencies/dynamodb_local_latest/log/`date '+%Y-%m-%d_%H:%M:%S'`.log &'
 
 alias killDynamoDB='lsof -ti tcp:8001 | xargs kill'
-
+alias study='open /site/notes/courses.washington.edu/index.html'
 alias fixSynergy='ps aux | grep -i syngery | grep -v grep | awk "{print $2}" | xargs sudo kill -9'
+
+# Emacs
+alias emacs='/usr/local/Cellar/emacs/26.1_1/bin/emacs'
+
+alias checkYnabColor='curl -H "Authorization: Bearer $(cat /site/projects/personal/ynab/token.txt)" https://api.youneedabudget.com/v1/budgets/a71f3636-c749-45b5-899c-045fdee2f54d | jq .data.budget.transactions[].flag_color | egrep -i "yellow|green|purple" | sort | uniq -c'
+
+
+
+alias startGrafana='brew services start grafana'
+
