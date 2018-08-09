@@ -5,7 +5,16 @@ cd "$(dirname "${BASH_SOURCE}")";
 #git pull origin master;
 
 function doIt() {
-    ls -d .?* | grep -v '\.\.' | grep -v '.git*' | xargs -I {} cp -R ~/{} .
+    for file in $(ls -d .?* | grep -v '\.\.' | grep -v '.git*'); do
+        if [[ -d $file ]]; then
+            if [[ -d $file.git ]]; then
+                rm -rf $file.git
+                cp -R $file .
+            fi
+        else 
+            cp $file . > /dev/null 2>&1
+        fi
+    done
     rm -rf .vim/bundle/*
 }
 
