@@ -137,7 +137,8 @@ alias brs='be rails s'
 
 # Git commands
 alias gs='git status'
-alias gg='git grep -i '
+alias gg='git grep -n '
+alias ggi='git grep -in '
 alias gd='git diff'
 alias gl='git lg'
 alias ggraph='git lgg'
@@ -200,6 +201,27 @@ alias emacs='/usr/local/Cellar/emacs/26.1_1/bin/emacs'
 alias checkYnabColor='curl -H "Authorization: Bearer $(cat /site/projects/personal/ynab/token.txt)" https://api.youneedabudget.com/v1/budgets/a71f3636-c749-45b5-899c-045fdee2f54d | jq .data.budget.transactions[].flag_color | egrep -i "yellow|green|purple" | sort | uniq -c'
 
 
+function cs_start() {
+    export CASSANDRA_HOME=~/dev/dsc-cassandra-2.1.5/
+    export PATH=$CASSANDRA_HOME/bin:$PATH
+    ~/dev/dsc-cassandra-2.1.5/bin/cassandra
+}
+
 
 alias startGrafana='brew services start grafana'
+alias es_start='~/dev/elasticsearch-1.7.3/bin/elasticsearch'
+alias es_start6='~/dev/elasticsearch-6.0.0/bin/elasticsearch'
+alias cs_stop='lsof -t -i :7000 | xargs kill'
+alias zoo_start='~/dev/kafka_2.11-0.10.2.1/bin/zookeeper-server-start.sh ~/dev/kafka_2.11-0.10.2.1/config/zookeeper.properties'
+alias start_all='~/bin/start_all'
+
+alias kafka_start='~/dev/kafka_2.11-0.10.2.1/bin/kafka-server-start.sh ~/dev/kafka_2.11-0.10.2.1/config/server.properties'
+
+alias cat='bat'
+
+alias ping='prettyping --nolegend'
+
+alias find='fd'
+
+alias fff='~/bin/fff'
 

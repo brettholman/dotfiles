@@ -66,6 +66,8 @@ plugins=(
   rails
   ruby
   zsh-autosuggestions
+  autojump
+  pyenv
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -99,3 +101,8 @@ export SSH_KEY_PATH="~/.ssh/rsa_id"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 source ~/.aliases
+source ~/.functions
+[[ -s "$HOME/.local/share/marker/marker.sh" ]] && source "$HOME/.local/share/marker/marker.sh"
+
+export SBT_OPTS=-XX:MaxPermSize=256m
+eval "$(pyenv init -)"

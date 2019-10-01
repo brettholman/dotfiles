@@ -4,6 +4,14 @@ execute pathogen#infect()
 syntax on
 let g:ale_emit_conflict_warnings = 0
 
+" VimPlug
+call plug#begin()
+
+Plug 'scrooloose/nerdtree'
+Plug 'kien/ctrlp.vim'
+
+call plug#end()
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
