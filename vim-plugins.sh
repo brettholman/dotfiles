@@ -14,5 +14,7 @@ git clone https://github.com/skwp/vim-easymotion ~/.vim/bundle/vim-easymotion
 git clone https://github.com/jistr/vim-nerdtree-tabs ~/.vim/bundle/vim-nerdtree-tabs
 git clone https://github.com/kana/vim-surround ~/.vim/bundle/vim-surround
 git clone https://github.com/derekwyatt/vim-scala ~/.vim/bundle/vim-scala
+curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 rm ~/.vim/bundle/tmp
